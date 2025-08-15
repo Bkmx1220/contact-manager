@@ -1,0 +1,116 @@
+/* Style global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Titre principal */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Formulaire d'ajout */
+input[type="text"], input[type="email"], input[type="tel"] {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Message aucun contact */
+td[colspan] {
+  text-align: center;
+  color: #777;
+}
+
+/* Actions */
+.action-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 18px;
+  margin: 0 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.action-btn:hover {
+  transform: scale(1.2);
+}
+
+.edit {
+  color: #ffc107; /* Jaune */
+}
+
+.delete {
+  color: #dc3545; /* Rouge */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+  }
+}
